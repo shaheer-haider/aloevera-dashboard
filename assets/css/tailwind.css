@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+
+@layer components {
+  .btn-danger {
+    @apply px-[14px] py-[8px] text-white bg-primary-red transition-colors duration-200 transform hover:bg-hover-primary-red focus:outline-none focus:ring focus:ring-[#fd626260];
+  }
+
+  .btn-primary {
+    @apply px-4 py-2 text-white bg-primary-green transition-colors duration-200 transform hover:bg-hover-primary-green focus:outline-none focus:ring focus:ring-[#3af0986e];
+  }
+
+  .btn-gray-stroke {
+    @apply px-4 py-2 text-primary-light-gray border-[2px] border-primary-light-gray bg-transparent transition-colors duration-200 transform hover:bg-primary-light-gray focus:bg-primary-light-gray hover:text-white focus:text-white focus:outline-none focus:ring focus:ring-[#5b758e71];
+  }
+
+  .select-primary {
+    @apply relative min-w-[168px] h-10 text-primary-gray w-max bg-white rounded-md shadow-[0px_1px_3px_#2e4e6f14] overflow-hidden;
+  }
+
+  .select-primary>select {
+    @apply bg-white appearance-none w-full h-full px-[10px] py-2 outline-1 outline-[#cccccc] capitalize;
+
+  }
+  .select-primary>img {
+    @apply absolute right-2 top-[50%] translate-y-[-50%];
+
+  }
+}
